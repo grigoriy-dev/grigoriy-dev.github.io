@@ -194,3 +194,52 @@
                 columns: 1;
             }
         }
+
+        /* Стили для блока с фото и именем */
+        .header-profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-photo-container {
+            flex-shrink: 0;
+        }
+        
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--orange);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(230, 126, 34, 0.3);
+        }
+        
+        .profile-name h1 {
+            color: var(--dark-green);
+            margin: 0;
+            line-height: 1.2;
+            font-size: 2.2rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        /* Адаптация для мобильных */
+        @media (max-width: 600px) {
+            .header-profile {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .profile-name h1 {
+                font-size: 1.8rem;
+            }
+        }
